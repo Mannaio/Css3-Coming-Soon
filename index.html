@@ -105,7 +105,7 @@
 	    // 2. Clear the form fields
 	    // 3. Fade the content back in
 
-	    $('#successMessage').fadeIn().delay(messageDelay).fadeOut();
+	    $('#successMessage').fadeIn().delay(messageDelay);
 	    $('#senderName').val( "" );
 	    $('#senderEmail').val( "" );
 	    $('#message').val( "" );
@@ -123,6 +123,28 @@
 
 	</script>
 
+	<script type="text/javascript">
+
+	$(function() {
+	    $("a#button").click(function () {
+	        $(".subscribe").css("display", "none");
+	    });
+	});
+
+	$(function() {
+	    $(".md-close").click(function () {
+	        $(".subscribe").css("display", "block");
+	    });
+	});
+
+	$(function() {
+	    $(".md-overlay").click(function () {
+	        $(".subscribe").css("display", "block");
+	    });
+	});
+
+	</script>
+
 </head>
 <body>
 
@@ -134,7 +156,7 @@
 			<div class="subscribe-form">
 				<div class="stripes top"></div>
 				<div class="subscribe-space">				
-					<p>My new web App portfolio is now under costrunction.</p>
+					<p>My new web App portfolio is under costrunction.</p>
 					<p>Send me an email to stay update for the launch</p>
 					<hr class="line">
 					<a id="button" class="md-trigger md-setperspective" data-modal="modal-17" href="#contactForm">Send</a></button>				
@@ -151,6 +173,10 @@
 	<div class="md-content">
 		<h3>Modal Dialog</h3>
 		<button class="md-close">Close me!</button>
+	<div id="sendingMessage" class="statusMessage"><p>Sending your message. Please wait...</p></div>
+	<div id="successMessage" class="statusMessage"><p>Thanks for sending your message! We'll get back to you shortly.</p></div>
+	<div id="failureMessage" class="statusMessage"><p>There was a problem sending your message. Please try again.</p></div>
+	<div id="incompleteMessage" class="statusMessage"><p>Please complete all the fields in the form before sending.</p></div>
 	<form id="contactForm" action="processForm.php" method="post">
 
 	  <ul>
@@ -175,8 +201,9 @@
 	  <div id="formButtons">
 	    <input type="submit" id="sendMessage" name="sendMessage" value="Send Email" />
 	  </div>
+
 	</form>
-		</div>
+
 	</div>
 </div>
 
@@ -192,6 +219,9 @@
 	// this is important for IEs
 	var polyfilter_scriptpath = '/js/';
 </script>
+		
+</script>
+
 <script src="js/cssParser.js"></script>
 <script src="js/css-filters-polyfill.js"></script>
 
