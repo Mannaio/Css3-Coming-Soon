@@ -77,7 +77,7 @@
 	    // Yes; submit the form to the PHP script via Ajax
 
 	    $('#sendingMessage').fadeIn();
-	    contactForm.fadeOut();
+	    contactForm.css("display", "none");
 
 	    $.ajax( {
 	      url: contactForm.attr( 'action' ) + "?ajax=true",
@@ -133,7 +133,8 @@
 
 	$(function() {
 	    $(".md-close").click(function () {
-	        $("#sendingMessage").css("display", "none")
+	        $("#sendingMessage").css("display", "none");
+	        $("#successMessage").css("display", "none");
 	        $(".subscribe").css("display", "block");
 	    });
 	});
@@ -141,6 +142,15 @@
 	$(function() {
 	    $(".md-overlay").click(function () {
 	        $(".subscribe").css("display", "block");
+	        $("#successMessage").css("display", "none");
+	    });
+	});
+
+	$(function() {
+	    $(".md-closing").click(function () {
+	        $(".subscribe").css("display", "block");
+	        $("#successMessage").css("display", "none");
+	        $(".md-overlay").css("visibility", "hidden");
 	    });
 	});
 
@@ -157,10 +167,10 @@
 			<div class="subscribe-form">
 				<div class="stripes top"></div>
 				<div class="subscribe-space">				
-					<p>My new web App portfolio is under costrunction.</p>
+					<p>My new web is under costrunction.</p>
 					<p>Send me an email to stay update for the launch</p>
 					<hr class="line">
-					<a id="button" class="md-trigger md-setperspective" data-modal="modal-17" href="#contactForm">Send</a></button>				
+					<a id="button" class="md-trigger md-setperspective" data-modal="modal-17" href="#contactForm">Send</a></button>			
 				</div>			
 			</div>
 		</div>
@@ -171,38 +181,35 @@
 </div>
 
 <div class="md-modal md-effect-17" id="modal-17">
-	<button class="md-close">Close me!</button>
 	<div class="md-content">
-		<h3>Modal Dialog</h3>
-
 		<div id="sendingMessage" class="statusMessage"><p>Sending your message. Please wait...</p></div>
-		<div id="successMessage" class="statusMessage"><p>Thanks for sending your message! We'll get back to you shortly.</p></div>
+		<div id="successMessage" class="statusMessage"><p>Thanks for sending your message! We'll get back to you shortly.</p><a href="http://www.tommasovilla.com/comingsoon/">Torna dietro</a></div>	
 		<div id="failureMessage" class="statusMessage"><p>There was a problem sending your message. Please try again.</p></div>
 		<div id="incompleteMessage" class="statusMessage"><p>Please complete all the fields in the form before sending.</p></div>
 
 	<form id="contactForm" action="processForm.php" method="post">
-
 	  <ul>
 
 	    <li>
-	      <label for="senderName">Your Name</label>
-	      <input type="text" name="senderName" id="senderName" placeholder="Please type your name" required="required" maxlength="40" />
+	      <label for="senderName">Names</label>
+	      <input type="text" name="senderName" id="senderName" required="required" maxlength="40" />
 	    </li>
 
 	    <li>
-	      <label for="senderEmail">Your Email Address</label>
-	      <input type="email" name="senderEmail" id="senderEmail" placeholder="Please type your email address" required="required" maxlength="50" />
+	      <label for="senderEmail">Email</label>
+	      <input type="email" name="senderEmail" id="senderEmail" required="required" maxlength="50" />
 	    </li>
 
 	    <li>
-	      <label for="message" style="padding-top: .5em;">Your Message</label>
-	      <textarea name="message" id="message" placeholder="Please type your message" required="required" cols="80" rows="10" maxlength="10000"></textarea>
+	      <label for="message" style="padding-top: .5em;">Message</label>
+	      <textarea name="message" id="message" required="required" cols="80" rows="10" maxlength="10000"></textarea>
 	    </li>
 
 	  </ul>
 
 	  <div id="formButtons">
 	    <input type="submit" id="sendMessage" name="sendMessage" value="Send Email" />
+	    <button class="md-close">Close me!</button>
 	  </div>
 
 	</form>

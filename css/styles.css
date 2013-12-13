@@ -177,7 +177,7 @@ a {
 /* Style for the contact form and status messages */
 
 #contactForm, .statusMessage {
-  color: #666;
+  color: #F3EB12;
   opacity: .95;
 }
 
@@ -185,8 +185,7 @@ a {
 /* The form dimensions */
 
 #contactForm {
-  width: 40em;
-  height: 33em;
+  width: 150em;
   padding: 0 1.5em 1.5em 1.5em;
   margin: 0 auto;
 }
@@ -201,6 +200,11 @@ a {
   right: 0;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+#formButtons {
+	width: 600px;
+	height: 60px;
 }
 
 
@@ -235,12 +239,18 @@ a {
 }
 
 #contactForm ul li {
-  margin: .9em 0 0 0;
+  margin: 1.7em 0 0 0;
   padding: 0;
 }
 
 #contactForm input, #contactForm label {
   line-height: 1em;
+  border: 1px solid transparent;
+  width: 10%;
+}
+
+#contactForm input {
+	width: 15%;
 }
 
 
@@ -250,11 +260,8 @@ label {
   display: block;
   float: left;
   clear: left;
-  text-align: right;
-  width: 28%;
-  padding: .4em 0 0 0;
-  margin: .15em .5em 0 0;
   font-weight: bold;
+  font-size: 40px;
 }
 
 
@@ -263,22 +270,15 @@ label {
 input, textarea {
   display: block;
   margin: 0;
-  padding: .4em;
-  width: 67%;
+  padding: 1.2em;
+  width: 27%;
   font-family: "Georgia", serif;
   font-size: 1em;
-  border: 1px solid #aaa;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;    
-  border-radius: 5px;
-  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
-  -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
-  box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
   background: url(../images/transp1.png);
+  border: none;
 }
 
 textarea {
-  height: 13em;
   line-height: 1.5em;
   resize: none;
 }
@@ -287,18 +287,18 @@ textarea {
 /* Place a border around focused fields, and hide the inner shadow */
 
 #contactForm *:focus {
-  border: 1px solid #66f;
-  outline: none;
+  border: 1px solid #FFF966;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  outline: none;
 }
 
 
 /* Display correctly filled-in fields with a green background */
 
 input:valid, textarea:valid {
-  background: #dfd;
+  background: #424242;
 }
 
 
