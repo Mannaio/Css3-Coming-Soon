@@ -382,28 +382,5 @@ input[type="button"] {
   font-size: 1.5em;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 959px) {
 
-	.container {
-	  width: 480px;
-	  margin: 0 auto;
-	}
-
-}
-
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	.container {
-	  width: 380px;
-	  margin: 0 auto;
-	}
-
-}
-
-@media only screen and (max-width: 479px) {
-	.container {
-	  width: 360px;
-	  margin: 0 auto;	  
-	}
-}
 
