@@ -383,4 +383,50 @@ input[type="button"] {
 }
 
 
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	.container {
+	  width: 480px;
+	  margin: 0 auto;
+	}
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.container {
+	  width: 380px;
+	  margin: 0 auto;
+	}
+		.subscribe,
+			.subscribe-wrapper{
+				margin-top: 20%;
+			}
+			.subscribe-form,
+			.subscribe-success,			
+				.subscribe p {
+					font-size: 18px;
+				}
+
+}
+
+@media only screen and (max-width: 479px) {
+	.container {
+	  width: 360px;
+	  margin: 0 auto;	  
+	}
+		.subscribe,
+			.subscribe-wrapper{
+				margin-top: 25%;
+			}
+			.subscribe-form{
+				width: 305px;
+				
+			}
+			.subscribe-success,			
+				.subscribe p {
+					font-size: 16px;
+				}
+}
+
 
