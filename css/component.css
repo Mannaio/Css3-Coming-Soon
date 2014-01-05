@@ -22,7 +22,7 @@ perspective effects (not including the modals and the overlay).
 	top: 40%;
 	left: 50%;
 	width: 50%;
-	max-width: 630px;
+	max-width: 670px;
 	min-width: 320px;
 	height: auto;
 	z-index: 2000;
@@ -102,7 +102,7 @@ perspective effects (not including the modals and the overlay).
 	background: none;
 	color: #fff;
 	font-family: proxima-nova;
-	font-size: 15px;
+	font-size: 16px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	cursor: pointer;
