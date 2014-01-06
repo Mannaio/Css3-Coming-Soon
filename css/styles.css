@@ -436,21 +436,70 @@ input[type="button"] {
 
 @media only screen and (max-width: 479px) {
 	.container {
-	  width: 360px;
+	  width: 300px;
 	  margin: 0 auto;	  
 	}
 		.subscribe,
 			.subscribe-wrapper{
-				margin-top: 25%;
+				margin-top: 15%;
 			}
 			.subscribe-form{
-				width: 305px;
+				width: 290px;
+				height: 90%;
 				
 			}
 			.subscribe-success,			
 				.subscribe p {
-					font-size: 16px;
+					font-size: 14px;
+					line-height: 15px;
 				}
+
+
+	#contactForm {
+		width: 70em;
+	}
+
+	#contactForm ul {
+		margin-top: 50px;
+	}
+
+	#contactForm input {
+		width: 17%;
+		height: 5px;
+		font-size: 10px;
+	}
+
+	#contactForm textarea {
+		width: 15%;
+		height: 150px;
+	}
+
+	#contactForm label {
+		font-size: 20px;
+	}
+
+	.md-content button {
+		font-size: 10px;
+		width: 41%;
+	}
+
+	.md-modal {
+		top: 53%;
+	}
+
+	#formButtons {
+		width: 300px;
+	}
+
+	#formButtons button {
+		width: 42%;
+		font-size: 10px;
+	}
+
+
 }
+
+
+
 
 

@@ -262,3 +262,16 @@ perspective effects (not including the modals and the overlay).
 @media screen and (max-width: 32em) {
 	body { font-size: 75%; }
 }
+
+@media only screen and (max-width: 479px) {
+
+	.md-modal {
+		top: 47%;
+	}
+
+	.md-content button {
+		margin-right: 20px
+	}
+
+
+}
