@@ -273,15 +273,28 @@ perspective effects (not including the modals and the overlay).
 		margin-right: 20px
 	}
 
-
 }
 
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
 	.md-modal {
-		top: 55%;
+		left: 30%;
+
+	}
 
 }
+
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+	
+	.md-modal {
+		left: 40%;
+		top: 45%;
+
+	}
+
+}
+
+
 
 

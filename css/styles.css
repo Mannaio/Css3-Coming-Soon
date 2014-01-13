@@ -413,6 +413,15 @@ input[type="button"] {
 	  width: 480px;
 	  margin: 0 auto;
 	}
+		.subscribe,
+			.subscribe-wrapper{
+				margin-top: 30%;
+			}
+	
+	.md-modal {
+		left: 30%;
+
+	}
 
 }
 
