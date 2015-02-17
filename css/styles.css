@@ -1,11 +1,11 @@
 body {
-	font-family:proxima-nova;
 	background: #e7e7e7 url(../images/gib.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	overflow: hidden;				
+	overflow: hidden;
+	font-family:'Open Sans', sans-serif;				
 }
 
 a {
@@ -41,7 +41,6 @@ a {
 	.subscribe-success {
 		margin: 0 auto;
 		width:360px;
-		height:100%;
 		display:block;											
 		overflow:hidden;
 		background-image: url(../images/transp1.png);
@@ -68,7 +67,6 @@ a {
 		}
 		
 		.subscribe-space {
-			height:244px;
 			padding:20px;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
@@ -87,10 +85,9 @@ a {
 		.subscribe p {
 			color:#CFCFCF;
 			padding:0;
-			margin: 10px 0px;
+			margin: 5px 0px;
 			font-size: 15px;
 			line-height:20px;
-			font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif;
 			text-align: center;
 			font-weight: lighter;
 		}
@@ -158,6 +155,24 @@ a {
   			transition: opacity .5s;
   			opacity: 1;
 		}
+
+		.subscribe .sociaLinks {
+			margin-top: 20px;
+			width: 320px;
+			position: relative;
+			text-align: center;
+			display: block;
+		}
+
+		.subscribe .social-icons{
+			width: 50px;
+			height: 50px;
+		}
+
+		.subscribe .social-icons:hover path {
+  			fill: #727272;
+		}
+
 
 #contactForm, .statusMessage {
   color: #F3EB12;
@@ -388,25 +403,6 @@ input[type="button"] {
 }
 
 
-/* Header/footer boxes */
-
-.wideBox {
-  clear: both;
-  text-align: center;
-  margin: 70px;
-  padding: 10px;
-  background: #ebedf2;
-  border: 1px solid #333;
-}
-
-.wideBox h1 {
-  font-weight: bold;
-  margin: 20px;
-  color: #666;
-  font-size: 1.5em;
-}
-
-
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
 	.container {
@@ -435,11 +431,6 @@ input[type="button"] {
 			.subscribe-wrapper{
 				margin-top: 20%;
 			}
-			.subscribe-form,
-			.subscribe-success,			
-				.subscribe p {
-					font-size: 18px;
-				}
 
 	#contactForm {
 		width: 70em;
